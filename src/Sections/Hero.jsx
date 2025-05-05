@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import HeroText from '../Components/Herotext';
+import HeroText from '../Components/HeroText'
 import ParallaxBackground from '../Components/ParallaxBackground';
+
 
 const Hero = () => {
   // Create a ref for the astronaut element
