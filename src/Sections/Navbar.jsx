@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function Navigation() {
   return (
     <ul className="nav-ul">
@@ -32,7 +31,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-primary/20">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto c-space max-w-7xl">
         <div className="flex items-center justify-between py-2 sm:py-0 ">
           <a
             href="/"
@@ -46,7 +45,7 @@ const Navbar = () => {
           >
             <img
               src={
-                isOpen ? "/public/Assets/close.svg" : "/public/Assets/menu.svg"
+                isOpen ? "/Assets/close.svg" : "/Assets/menu.svg"
               }
               alt="menu icon"
               className="h-6 w-6"
@@ -57,12 +56,13 @@ const Navbar = () => {
           </nav>
         </div>
       </div>
-      { isOpen &&
-       (<div className="block overflow-hidden text-center sm:hidden">
-        <nav className="pb-5" >
-          <Navigation />
-        </nav>
-      </div>)}
+      {isOpen && (
+        <div className="block overflow-hidden text-center sm:hidden">
+          <nav className="pb-5">
+            <Navigation />
+          </nav>
+        </div>
+      )}
     </div>
   );
 };
