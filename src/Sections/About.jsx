@@ -22,14 +22,17 @@ const About = () => {
         {/*Grid 2 */}
         <div className=" grid-default-color grid-2">
             <div  className="flex items-center justify-center w-full h-full">
-                <p className="flex items-end text-5xl text-gray-500">CODE IS CRAFT</p>
-                <Card style={{rotate:"75deg",top:"30%",left:"20%",}} text="GRASP" />
-                <Card style={{rotate:"-30deg",top:"60%",left:"45%",}} text="SOLID" />
-                <Card style={{rotate:"90deg",bottom:"30%",left:"70%",}} text="DESIGN PATTERNS" />
-                <Card style={{rotate:"-45deg",top:"55%",left:"0%",}} text="DESIGN PRINCIPLES" />
-                <Card style={{rotate:"20deg",top:"10%",left:"30%",}}  text="SRP" />
+                <p className="flex items-end text-5xl text-gray-500 opacity-25">CODE IS CRAFT</p>
+                <Card style={{rotate:"20deg",top:"10%",left:"10%",}} image="/Assets/logos/next.svg" />
+                <Card style={{rotate:"-30deg",top:"60%",left:"45%",}} image="/Assets/logos/react.svg"  />
+                <Card style={{rotate:"90deg",bottom:"70%",left:"70%",}} image="/Assets/logos/gitlab.svg"  />
+                <Card style={{rotate:"-45deg",top:"55%",left:"10%",}} image="/Assets/logos/js.svg" />
+                <Card style={{rotate:"20deg",top:"10%",left:"30%",}}  image="/Assets/logos/css.svg" />
                 <Card style={{rotate:"30deg",top:"70%",left:"70%",}}  image="/Assets/logos/html5.svg"  />
                 <Card style={{rotate:"-45deg",top:"70%",left:"25%",}}  image="/Assets/logos/git.svg" />
+                <Card style={{rotate:"-45deg",top:"30%",right:"35%",}}  image="/Assets/logos/tailwind.svg" />
+                <Card style={{rotate:"0deg",top:"45%",right:"10%",}}  image="/Assets/logos/jira.svg" />
+                <Card style={{rotate:"0deg",bottom:"45%",left:"30%",}}  image="/Assets/logos/notion.svg" />
             </div>
         </div>
 
