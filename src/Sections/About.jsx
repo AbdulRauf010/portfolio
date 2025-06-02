@@ -1,6 +1,8 @@
 import React from "react";
 import Card from "../Components/Card";
 import { Globe } from "../Components/Globe";
+import CopyEmailButton from "../Components/CopyEmailButton";
+import { FrameWorks } from "../Components/FrameWorks";
 
 const About = () => {
   return (
@@ -38,6 +40,7 @@ const About = () => {
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
               image="/Assets/logos/react.svg"
             />
+             <Card style={{rotate:"90deg",bottom:"30%",left:"75%",}} text="DESIGN PATTERNS" />
             <Card
               style={{ rotate: "90deg", bottom: "70%", left: "70%" }}
               image="/Assets/logos/gitlab.svg"
@@ -87,9 +90,25 @@ const About = () => {
         </div>
         
         {/*Grid 4 */}
-        <div className=" grid-special-color grid-4"></div>
+        <div className=" grid-speciall-color grid-4">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center headtext">
+              Do you want to start a project together?
+            </p>
+            <CopyEmailButton/>
+          </div>
+        </div>
         {/*Grid 5 */}
-        <div className=" grid-default-color grid-5"></div>
+        <div className=" grid-default-color grid-5">
+           <div className="z-10 w-[50%]">
+            <p className="headtext">Teck Stack</p>
+            <p className="subtext">I specialize in a variety of languages, frameworks and tools allow me to build robust and scalable applications</p>
+
+          </div>
+          <div className="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125 ">
+            <FrameWorks/>
+          </div>
+        </div>
       </div>
     </section>
   );
