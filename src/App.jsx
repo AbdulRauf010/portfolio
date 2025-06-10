@@ -5,30 +5,31 @@ import About from "./Sections/About";
 import Projects from "./Sections/Projects";
 import Experieneces from "./Sections/Experieneces";
 import Testimonial from "./Sections/Testimonial";
+import Contact from "./Sections/Contact";
 
 const App = () => {
   return (
-    <div className="container mx-auto max-w-7xl" style={{ scrollBehavior: "smooth" }}>
+    <div
+      className="container mx-auto max-w-7xl"
+      style={{ scrollBehavior: "smooth" }}
+    >
       {/*Navbar */}
       <Navbar />
       {/*hero */}
       <Hero />
 
-      
       {/*about */}
-      <About/>
-      
+      <About />
+
       {/*projects */}
-      <Projects/>
-        {/*experience */}
-       <Experieneces/>
-      
+      <Projects />
+      {/*experience */}
+      <Experieneces />
+
       {/*testimonial */}
-      <Testimonial/>
-    
-     <section  className="min-h-screen"/>
-      <section  className="min-h-screen"/>
+      <Testimonial />
       {/*contact */}
+      <Contact />
       {/*footer */}
     </div>
   );
