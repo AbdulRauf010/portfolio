@@ -1,11 +1,11 @@
-import React from "react";
+
 import { FlipWords } from "./FlipWords";
 
-const words = ["Secure", "Modren", "Scalable"];
+const words = ["Secure", "Modern", "Scalable"];
 
 const HeroText = () => {
   return (
-    <div className="z-10 mt-20 text-center md:mt-40 md:text-left  rounded-3xl bg-clip-text">
+    <div className="z-10 mt-20 text-left md:mt-40 rounded-3xl bg-clip-text">
       {/* Desktop View */}
       <div className="flex-col hidden md:flex c-space">
         <h1 className="text-4xl font-medium">Hi I'm Abdul</h1>

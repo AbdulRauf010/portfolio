@@ -40,7 +40,6 @@ const About = () => {
               style={{ rotate: "-30deg", top: "60%", left: "45%" }}
               image="/Assets/logos/react.svg"
             />
-             <Card style={{rotate:"90deg",bottom:"30%",left:"75%",}} text="DESIGN PATTERNS" />
             <Card
               style={{ rotate: "90deg", bottom: "70%", left: "70%" }}
               image="/Assets/logos/gitlab.svg"

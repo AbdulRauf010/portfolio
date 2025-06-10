@@ -1,7 +1,7 @@
+
 import React, { useEffect, useRef } from 'react';
 import HeroText from '../Components/HeroText'
 import ParallaxBackground from '../Components/ParallaxBackground';
-
 
 const Hero = () => {
   // Create a ref for the astronaut element
@@ -59,18 +59,24 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className='flex items-start justify-center md:items-start md:justify-start c-space min-h-screen overflow-hidden'>
-      <HeroText />
+    <section className='flex items-center md:items-start justify-start c-space min-h-screen overflow-hidden'>
+      {/* ParallaxBackground - always visible */}
       <ParallaxBackground />
+      
+      {/* HeroText - left aligned on all devices */}
+      <div className="relative z-10 w-full">
+        <HeroText />
+      </div>
+      
+      {/* Astronaut - hidden on mobile, visible on desktop */}
       <div
-        ref={astronautRef} // Attach the ref directly to the element
-        className="astronaut mt-40 w-full h-[70vh] bg-cover bg-no-repeat bg-center"
+        ref={astronautRef}
+        className="hidden md:block astronaut mt-40 w-full h-[70vh] bg-cover bg-no-repeat bg-center"
         style={{
           backgroundImage: "url(/Assets/astronaut.png)",
           backgroundSize: "contain",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          // Remove any transform here if it exists
         }}
       />
     </section>
