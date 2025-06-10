@@ -99,17 +99,17 @@ export const mySocials = [
   {
     name: "WhatsApp",
     href: "",
-    icon: "/assets/socials/whatsApp.svg",
+    icon: "/public/Assets/whatsApp.svg",
   },
   {
     name: "Linkedin",
-    href: "https://www.linkedin.com/in/ali-sanati/",
-    icon: "/assets/socials/linkedIn.svg",
+    href: "",
+    icon: "/public/Assets/linkedIn.svg",
   },
   {
     name: "Instagram",
-    href: "https://www.instagram.com/ali.sanatidev/reels/",
-    icon: "/assets/socials/instagram.svg",
+    href: "",
+    icon: "/public/Assets/instagram.svg",
   },
 ];
 
