@@ -181,18 +181,37 @@ const App = () => {
       >
         {/*Navbar */}
         <Navbar />
+        
         {/*hero */}
-        <Hero />
+        <section id="hero">
+          <Hero />
+        </section>
+        
         {/*about */}
-        <About />
+        <section id="about">
+          <About />
+        </section>
+        
         {/*projects */}
-        <Projects />
+        <section id="projects">
+          <Projects />
+        </section>
+        
         {/*experience */}
-        <Experieneces />
+        <section id="experience">
+          <Experieneces />
+        </section>
+        
         {/*testimonial */}
-        <Testimonial />
+        <section id="testimonial">
+          <Testimonial />
+        </section>
+        
         {/*contact */}
-        <Contact />
+        <section id="contact">
+          <Contact />
+        </section>
+        
         {/*footer */}
         <Footer />
       </div>

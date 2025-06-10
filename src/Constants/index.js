@@ -99,17 +99,17 @@ export const mySocials = [
   {
     name: "WhatsApp",
     href: "",
-    icon: "/public/Assets/whatsApp.svg",
+    icon: "/Assets/whatsApp.svg",
   },
   {
     name: "Linkedin",
     href: "",
-    icon: "/public/Assets/linkedIn.svg",
+    icon: "/Assets/linkedIn.svg",
   },
   {
     name: "Instagram",
     href: "",
-    icon: "/public/Assets/instagram.svg",
+    icon: "/Assets/instagram.svg",
   },
 ];
 

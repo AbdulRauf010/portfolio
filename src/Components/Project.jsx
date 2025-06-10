@@ -46,24 +46,63 @@
 // };
 
 // export default Project;
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProjectDetails from "./ProjectDetails";
 
 const Project = ({ title, description, subDescription, href, image, tags }) => {
   const [isHidden, setIsHidden] = useState(false);
   const [previewPosition, setPreviewPosition] = useState({ x: 0, y: 0 });
   const [showPreview, setShowPreview] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  // Handle scroll events to hide preview during scroll
+  useEffect(() => {
+    let scrollTimeout;
+
+    const handleScroll = () => {
+      setIsScrolling(true);
+      setShowPreview(false);
+      
+      // Clear existing timeout
+      clearTimeout(scrollTimeout);
+      
+      // Set scrolling to false after scroll ends
+      scrollTimeout = setTimeout(() => {
+        setIsScrolling(false);
+      }, 150);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
 
   const handleMouseMove = (e) => {
-    setPreviewPosition({ x: e.clientX + 10, y: e.clientY + 10 }); // Offset to avoid cursor overlap
+    // Only update position if not scrolling and mouse coordinates are valid
+    if (!isScrolling && e.clientX > 0 && e.clientY > 0) {
+      setPreviewPosition({ x: e.clientX + 10, y: e.clientY + 10 });
+    }
+  };
+
+  const handleMouseEnter = () => {
+    if (!isHidden && !isScrolling) {
+      setShowPreview(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setShowPreview(false);
   };
 
   return (
     <div
       className="relative"
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => !isHidden && setShowPreview(true)} // Disable preview when modal is open
-      onMouseLeave={() => setShowPreview(false)}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="flex-wrap items-center justify-between py-10 space-y-14 sm:flex sm:space-y-0">
         <div>
@@ -90,7 +129,7 @@ const Project = ({ title, description, subDescription, href, image, tags }) => {
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
 
       {/* Image Preview on Hover */}
-      {showPreview && !isHidden && (
+      {showPreview && !isHidden && !isScrolling && previewPosition.x > 0 && previewPosition.y > 0 && (
         <div
           className="fixed pointer-events-none z-40"
           style={{
