@@ -31,7 +31,7 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      await emailjs.send("service_3z6tivl","template_m51erbf", {from_name:formData.name,to_name:"Abdul Rauf",from_email:formData.email,message:formData.msg},"9a0Weh4Kea-w7SjmB" );
+      await emailjs.send("service_3z6tivl","template_m51erbf", {from_name:formData.name,to_name:"Abdul Rauf",email:formData.email,message:formData.msg},"9a0Weh4Kea-w7SjmB" );
       setIsLoading(false);
       showAlertMessage("success", "You message has been sent!");
       setFormData({
