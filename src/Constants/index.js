@@ -408,17 +408,17 @@ export const mySocials = [
 
 
 export const experiences = [
-  {
-    title: "React Developer Intern",
-    job: "Gulzar Soft",
-    date: "January 2024 - August 2024",
-    contents: [
-      "Assisted in building responsive web applications using React.js and Next.js.",
-      "Collaborated with the development team to implement reusable UI components and improve code efficiency.",
-      "Gained hands-on experience with RESTful APIs, state management (Redux & Context API), and component optimization.",
-      "Worked on debugging and performance tuning to ensure fast and user-friendly interfaces.",
-    ],
-  },
+  // {
+  //   title: "React Developer Intern",
+  //   job: "Gulzar Soft",
+  //   date: "January 2024 - August 2024",
+  //   contents: [
+  //     "Assisted in building responsive web applications using React.js and Next.js.",
+  //     "Collaborated with the development team to implement reusable UI components and improve code efficiency.",
+  //     "Gained hands-on experience with RESTful APIs, state management (Redux & Context API), and component optimization.",
+  //     "Worked on debugging and performance tuning to ensure fast and user-friendly interfaces.",
+  //   ],
+  // },
   {
     title: "Associate React Developer",
     job: "Rev9 Solutions",
